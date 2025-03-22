@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        
+        <div class="todo-input">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <select id="category-select">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="shopping">Shopping</option>
+                <option value="other">Other</option>
+            </select>
+            <button id="add-btn">Add Task</button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="todo-list" id="todo-list">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+
+        <div class="todo-stats">
+            <span id="tasks-count">0 tasks left</span>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html> 
